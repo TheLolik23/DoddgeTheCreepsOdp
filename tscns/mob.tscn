@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://y472t7nxpprn"]
+
+[ext_resource type="Script" uid="uid://hrvnpdv5lj4w" path="res://scripts/mob.gd" id="1_jklkn"]
+[ext_resource type="Texture2D" uid="uid://cnnytsur1r5m1" path="res://assets/art/enemyFlyingAlt_1.png" id="2_gfurk"]
+[ext_resource type="Texture2D" uid="uid://bimhaii2ffgwl" path="res://assets/art/enemyFlyingAlt_2.png" id="3_ieysi"]
+[ext_resource type="Texture2D" uid="uid://bcuoyedrmjlgs" path="res://assets/art/enemySwimming_1.png" id="4_cixyi"]
+[ext_resource type="Texture2D" uid="uid://c1yv0jv0oa53v" path="res://assets/art/enemySwimming_2.png" id="5_7ulmv"]
+[ext_resource type="Texture2D" uid="uid://bqnfdlivwopqi" path="res://assets/art/enemyWalking_1.png" id="6_pcqmr"]
+[ext_resource type="Texture2D" uid="uid://dqi86jdicswx8" path="res://assets/art/enemyWalking_2.png" id="7_jbnni"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_37l05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gfurk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ieysi")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cixyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7ulmv")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_pcqmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jbnni")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1qmh0"]
+radius = 31.0
+height = 94.0
+
+[node name="Mob" type="RigidBody2D" unique_id=593709671]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_jklkn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1942527032]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_37l05")
+animation = &"swim"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1386816538]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1426319501]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_1qmh0")
