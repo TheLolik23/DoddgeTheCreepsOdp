@@ -15,7 +15,8 @@ func show_message(text: String) -> void:
 
 ## Obsługuje sekwencję końca gry (Game Over) i przygotowuje ekran do nowej rundy.
 func show_game_over() -> void:
-	show_message("Game Over")
+	# TODO: Zadanie 5 - Zmień podany tekst ("Wstaw tekst tutaj") na napis "Game Over", by w razie porażki gracz widział stosowny komunikat.
+	show_message("Wstaw tekst tutaj")
 	
 	# Zatrzymuje wykonywanie tej funkcji do momentu, aż MessageTimer zakończy odliczanie.
 	await $MessageTimer.timeout

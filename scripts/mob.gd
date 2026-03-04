@@ -22,4 +22,5 @@ func _process(_delta: float) -> void:
 ## Wywoływana, gdy obiekt VisibleOnScreenNotifier2D zgłosi, że przeciwnik zniknął z ekranu.
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	# Bezpieczne usunięcie obiektu z pamięci (aby nie zużywał zasobów działając w tle).
-	queue_free()
+	# TODO: Zadanie 4 - Wpisz poniżej funkcję queue_free(), która usuwa obiekt przeciwnika po wyjściu za ekran. Jeśli tego nie zrobisz, gra w końcu zacznie wolniej działać!
+	pass

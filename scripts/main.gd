@@ -30,7 +30,8 @@ func new_game() -> void:
 
 ## Wywoływana gdy upłynie czas na zdobycie kolejnego punktu.
 func _on_score_timer_timeout() -> void:
-	score += 1
+	# TODO: Zadanie 3 - Zwiększ wartość zmiennej "score" o 1, aby gracz dostawał punkty za przetrwanie.
+	
 	$HUD.update_score(score)
 
 ## Wywoływana po zakończeniu czasu przygotowania przed startem gry.

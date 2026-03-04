@@ -31,9 +31,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
 	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
+		# TODO: Zadanie 1 - Zmodyfikuj prędkość w osi Y (velocity.y), aby postać poruszała się w dół. Podpowiedź: w Godot oś Y rośnie w dół, więc dodaj 1.
+		pass
 	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
+		# TODO: Zadanie 2 - Zmodyfikuj prędkość w osi Y (velocity.y), aby postać poruszała się w górę. Podpowiedź: odejmij 1 od velocity.y.
+		pass
 
 	# Jeśli gracz się porusza, normalizujemy wektor ruchu i włączamy animację.
 	if velocity.length() > 0:
